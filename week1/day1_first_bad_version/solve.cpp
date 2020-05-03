@@ -2,21 +2,21 @@
 // bool isBadVersion(int version);
 
 class Solution {
-   public:
-    int firstBadVersion(int n) {
-        int left = 1;
-        int right = n;
-        int middle = 1;
+public:
+  int firstBadVersion(int n) {
+    int left = 1;
+    int right = n;
+    int middle = 1;
 
-        while (right >= left) {
-            middle = left + (right - left) / 2;
-            if (isBadVersion(middle)) {
-                right = middle - 1;
-            } else {
-                left = middle + 1;
-            }
-        }
-
-        return left;
+    while (right >= left) {
+      middle = left + (right - left) / 2;
+      if (isBadVersion(middle)) {
+        right = middle - 1;
+      } else {
+        left = middle + 1;
+      }
     }
+
+    return left;
+  }
 };
