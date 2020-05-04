@@ -6,7 +6,7 @@ public:
     }
 
     int digits = log2(num);
-    long ones = pow(2, digits + 1) - 1;
+    int ones = pow(2, digits + 1) - 1;
 
     return num ^ ones;
   }
